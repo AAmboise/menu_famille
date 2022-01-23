@@ -1,3 +1,4 @@
+<<<<<<< HEAD:assets/style/style1.css
 
 *{
 	color: darkred;
@@ -5,6 +6,9 @@
 	padding: 0;
 }
 body,html{
+=======
+html{
+>>>>>>> parent of a54f8da (Ajout compte-utilisateur + debug lien(nav) + suppr lien(footer)):assets/style/style.css
 	height: 100%;
 }
 
@@ -53,7 +57,6 @@ body{
 }
 
 footer a{
-	bottom: 0;
 	color: lightgrey;
 	font-size: 20px;
 
