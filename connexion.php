@@ -21,7 +21,6 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion'){
 		isset($_POST['pwd']) && 
 		!empty($_POST['pwd'])
 	){
-
 		// On se connecte à la bdd
 		try { $bdd = new PDO('mysql:host=localhost;dbname=menu_familial;charset=utf8', 'root', ''); } 
 		catch(Exception $e) { die('Erreur : '.$e->getMessage()); } 
