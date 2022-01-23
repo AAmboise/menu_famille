@@ -1,2 +1,5 @@
 
 /vendor/
+assets/style/style1.css
+template/inscription.php
+template/verification.php
