@@ -60,7 +60,7 @@
 	try { $bdd = new PDO('mysql:host=localhost;dbname=menu_familial;charset=utf8', 'root', ''); } catch(Exception $e) { die('Erreur : '.$e->getMessage()); }
 	
 	// On parccourt la bdd
-	$reponse = $bdd->query("SELECT * FROM user "); 
+	$reponse = $bdd->query("SELECT * FROM famille "); 
 
 	// On séléctionne et on affiche les noms et prénoms
 	WHILE ($data = $reponse->fetch()){
