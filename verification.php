@@ -36,7 +36,7 @@
       // Si aucun autre login identique existe, on inscrit ce nouveau login
         if ($result[0] == 0) {
 
-        $req=$bdd->prepare("INSERT INTO user (login, md5) VALUES('".$_POST['login']."', '".$_POST['mdp1']."')");
+        $req=$bdd->prepare("INSERT INTO membres (login, md5) VALUES('".$_POST['login']."', '".$_POST['mdp1']."')");
         $req->execute(array('login'=>$_POST['login'],'md5'=>$_POST['mdp1']));
         echo'inscription reussie !';
         echo"<br/><a href=\"connexion.php\">se connecter</a>";}
