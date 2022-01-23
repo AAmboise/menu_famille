@@ -26,7 +26,7 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription'){
 		catch(Exception $e) { die('Erreur : '.$e->getMessage()); } 
 
 		// On parcourt la bdd
-		$req = $bdd->query("SELECT count(*) FROM membres WHERE login = '".$_POST['login']."'"); 
+		$req = $bdd->query("SELECT count(*) FROM user WHERE login = '".$_POST['login']."'"); 
       
 		// Résultat requête
 		$result = $req->fetch();
@@ -36,7 +36,7 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription'){
 
 		// Si aucun autre login identique existe, on inscrit ce nouveau login
 		if ($result[0] == 0){
-			$req=$bdd->prepare("INSERT INTO membres (login, md5) VALUES('".$_POST['login']."', '".$_POST['mdp1']."')");
+			$req=$bdd->prepare("INSERT INTO user (login, md5) VALUES('".$_POST['login']."', '".$_POST['mdp1']."')");
 			$req->execute(array('login'=>$_POST['login'],'md5'=>$_POST['mdp1']));
 			echo'inscription reussie !';
 			echo"<br/><a href=\"connexion.php\">se connecter</a>";

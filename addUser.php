@@ -11,7 +11,7 @@
 	Bonjour, <?= htmlspecialchars($_POST['firstname']); ?>
 
 	<?php 
-		$req = $bdd->prepare("INSERT INTO user (nom, prenom) VALUES(:nom, :prenom)");
+		$req = $bdd->prepare("INSERT INTO famille (nom, prenom) VALUES(:nom, :prenom)");
 		$req->execute([
 			"nom" => $_POST['name'],
 			"prenom" => $_POST['firstname']

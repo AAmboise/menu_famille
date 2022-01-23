@@ -26,7 +26,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion'){
 		catch(Exception $e) { die('Erreur : '.$e->getMessage()); } 
 
 		// On parcourt la bdd
-		$req = $bdd->query("SELECT count(*) FROM membres WHERE login ='".$_POST['login']."' AND md5 ='".$_POST['pwd']."'");
+		$req = $bdd->query("SELECT count(*) FROM user WHERE login ='".$_POST['login']."' AND md5 ='".$_POST['pwd']."'");
 
 		// Résultat requête
 		$data = $req->fetch();
