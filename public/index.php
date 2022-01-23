@@ -1,60 +1,15 @@
-<?php include'template/header.html'; ?>
-<?php include'template/navigation.html'; ?>
-
-<?php 
-	if (isset($_SESSION['user'])){
-		$prenom = $_SESSION['prenom'];
-		$nom = $_SESSION['nom'];
-
-	} else {
-		$nom = 'inconnu';
-		$prenom = '';
-	}
-?>
-
-<!-- Feature -->
-<div class="container">
-	<div class="row mt-4">
-		<div class="col-xs12 col-sm-6">
-			<div class="feature text-center text-dark">
-				<p><a href="addUser.php"><i class="fas fa-user-plus"></i></a></p> 
-				<p>ajouter un membre</p>
-			</div> 
-		</div>
-		<div class="col-xs12 col-sm-6">
-			<div class="feature text-center text-dark">
-				<p><a href="#"><i class="fas fa-utensils "></i></a></p> 
-				<p>ajouter un menu</p>
-			</div>
-		</div>
-	</div>
-	<div class="row mt-4">
-		<div class="col-xs12 col-sm-6">
-			<div class="feature text-center text-dark">
-				<p><a href="addUser.php"><i class="fas fa-user-minus"></i></a></p> 
-				<p>Supprimer un membre</p>
-			</div> 
-		</div>
-		<div class="col-xs12 col-sm-6">
-			<div class="feature text-center text-dark">
-				<p><a href="#"><i class="fas fa-utensils "></i></a></p> 
-				<p>Supprimer un menu</p>
-			</div>
-		</div>
-	</div>
-</div>
-
- <!-- Liste des membres -->
 <?php
-	try { $bdd = new PDO('mysql:host=localhost;dbname=menu_familial;charset=utf8', 'root', ''); } catch(Exception $e) { die('Erreur : '.$e->getMessage()); }
-	
-	$reponse = $bdd->query("SELECT * FROM user "); 
 
-	WHILE ($data = $reponse->fetch()){
-		echo $data['prenom'].' '.$data['nom']."<br />";
-	} $reponse->closeCursor();
+require_once '../vendor/autoload.php';
 
-	echo("<br />");
-?>
+$loader = new \Twig\Loader\FilesystemLoader('../template');
 
-<?php include'template/footer.html'; ?>
+$twig = new \Twig\Environment($loader, [
+    'cache' => false,
+]);
+
+$texte = 'Coucou';
+
+echo $twig->render('home/index.html.twig', [
+    'texte' => $texte,
+]);
