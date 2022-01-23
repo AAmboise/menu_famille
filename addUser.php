@@ -1,5 +1,9 @@
-<?php include'template/header.html'; ?>
-<?php include'template/navigation.html'; ?>
+<!-- HEADER -->
+<?php include('template/layout/header.php') ?>
+
+
+
+
 
 <!-- Enregistre un nouveau membre -->
 <?php if (isset($_POST['name'])):
@@ -32,4 +36,9 @@ endif ?>
 	</div> 
 </form>
 
-<?php include'template/footer.html'; ?>
+
+
+<!-- FOOTER -->
+<?php include('template/layout/footer.html') ?>
+
+

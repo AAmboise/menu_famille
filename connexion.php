@@ -1,5 +1,8 @@
-<?php include'template/header.html'; ?>
-<?php include'template/navigation.html'; ?>
+<!-- HEADER -->
+<?php include('template/layout/header.php') ?>
+
+
+
 
 Connexion à l'espace membre :<br />
 		<form action="connexion.php" method="post">
@@ -58,4 +61,6 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion'){
 	}
 ?>
 
-<?php include'template/footer.html'; ?>
+
+<!-- FOOTER -->
+<?php include('template/layout/footer.html') ?>

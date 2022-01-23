@@ -1,5 +1,6 @@
-<?php include'template/header.html'; ?>
-<?php include'template/navigation.html'; ?>
+<!-- HEADER -->
+<?php include('template/layout/header.php') ?>
+
 
 <?php
 	session_start();
@@ -70,4 +71,6 @@
 	echo("<br />");
 ?>
 
-<?php include'template/footer.html'; ?>
+
+<!-- FOOTER -->
+<?php include('template/layout/footer.html') ?>
