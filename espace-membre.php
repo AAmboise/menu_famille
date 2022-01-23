@@ -7,10 +7,13 @@
 	if (!isset($_SESSION['login'])) {header ('Location: index.php');exit();}
 ?>
 
-<p><strong>ESPACE MEMBRES</strong><br/>
-		Bienvenue <?php echo htmlentities(trim($_SESSION['login'])); ?> !<br/>
-		<a href="deconnexion.php">Déconnexion</a>
-		</p>
+<p>
+	<strong>ESPACE MEMBRES</strong>
+	<br/>
+	Bienvenue <?php echo htmlentities(trim($_SESSION['login'])); ?> !<br/>
+	<a href="deconnexion.php">Déconnexion</a>
+</p>
+
 <?php 
 	if (isset($_SESSION['user'])){
 		$prenom = $_SESSION['prenom'];

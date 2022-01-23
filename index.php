@@ -2,8 +2,7 @@
 <?php include('template/layout/header.php') ?>
 
 
-Bienvenue
-
+<p>Page d'accueil</p>
 
 
 <!-- FOOTER -->
