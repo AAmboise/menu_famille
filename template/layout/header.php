@@ -39,4 +39,4 @@
 		</div>
 
 		<!-- BARRE DE NAVIGATION -->
-		<?php include('template/layout/navigation.html') ?>
+		<?php include('navigation.html') ?>
