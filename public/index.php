@@ -16,16 +16,51 @@ switch ($route){
 	default:
 	case null:
 	case 'index.php':
-	case 'index':
+	//case 'index':
 		$homeController = new \MenuFamille\Controller\HomeController();
-		echo $homeController->home();
+		echo $homeController->accueil();
 		break;
 
+	// Page d'inscription
+	case 'inscription.php':
+		$homeController = new \MenuFamille\Controller\HomeController();
+		echo $homeController->inscription();
+		break;
+
+	// Page de connexion
+	case 'connexion.php':
+		$homeController = new \MenuFamille\Controller\HomeController();
+		echo $homeController->connexion();
+		break;
+
+	// Page de vérification
+	case 'verification.php':
+		$homeController = new \MenuFamille\Controller\HomeController();
+		echo $homeController->verification();
+		break;
+
+	// Page Espace Membres
+	case 'espace-membre.php':
+		$homeController = new \MenuFamille\Controller\HomeController();
+		echo $homeController->espace_membre();
+		break;
+
+
 	// Page addUser
-	case 'addUser':
+	case 'addUser.php':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->addUser();
 		break;
 
-	// TODO Autres liens
+	// Page de deconnexion
+	case 'deconnexion.php':
+		$homeController = new \MenuFamille\Controller\HomeController();
+		echo $homeController->deconnexion();
+		break;
+
+	// Page de a propos
+	case 'apropos.php':
+		$homeController = new \MenuFamille\Controller\HomeController();
+		echo $homeController->apropos();
+		break;
 }

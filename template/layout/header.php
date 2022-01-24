@@ -34,8 +34,12 @@
 	
 	<body>
 		<!--Bannière-->
-		<div class="header">
-			<h1>Bienvenue sur le site dédié aux repas de famille</h1>
+		<div class="container-fluid">
+			<div class="row header ">
+				<div class="my-auto text-white text-center">					
+					<h1>Bienvenue sur le site dédié aux repas de famille</h1>
+				</div>
+			</div>	
 		</div>
 
 		<!-- BARRE DE NAVIGATION -->
