@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<?php include('template/layout/header.php') ?>
+<?php include('layout/header.php') ?>
 
 
 <?php
@@ -55,4 +55,4 @@ if (isset($_POST['inscription']) && $_POST['inscription'] == 'Inscription'){
 } ?>
 
 <!-- FOOTER -->
-<?php include('template/layout/footer.html') ?>
+<?php include('layout/footer.html') ?>

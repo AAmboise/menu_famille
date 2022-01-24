@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<?php include('template/layout/header.php') ?>
+<?php include('layout/header.php') ?>
 
 
 	Inscription à l'espace membre :<br/>
@@ -12,4 +12,4 @@
 
 
 <!-- FOOTER -->
-<?php include('template/layout/footer.html') ?>
+<?php include('layout/footer.html') ?>

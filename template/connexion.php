@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<?php include('template/layout/header.php') ?>
+<?php include('layout/header.php') ?>
 
 
 Connexion à l'espace membre :<br />
@@ -61,4 +61,4 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion'){
 
 
 <!-- FOOTER -->
-<?php include('template/layout/footer.html') ?>
+<?php include('layout/footer.html') ?>

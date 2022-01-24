@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<?php include('template/layout/header.php') ?>
+<?php include('layout/header.php') ?>
 
 
 <?php
@@ -76,4 +76,4 @@
 
 
 <!-- FOOTER -->
-<?php include('template/layout/footer.html') ?>
+<?php include('layout/footer.html') ?>
