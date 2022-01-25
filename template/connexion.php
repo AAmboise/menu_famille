@@ -1,13 +1,20 @@
 <!-- HEADER -->
 <?php include('layout/header.php') ?>
 
+<div class="container-fluid">
+  	<div class="row justify-content-center">
+    	<div class="py-2 my-5 text-center message col-5 border border-dark border-3 rounded-3">
+			<p class="fw-bold">Connexion à l'espace membre :<br /></p>
 
-Connexion à l'espace membre :<br />
-	<form action="connexion.php" method="post">
-		login&nbsp;&nbsp;=======><input type="text" name="login" value=""><br />
-		mot de passe&nbsp;==><input type="password" name="pwd" value=""><br />
-		<input type="submit" name="connexion" value="Connexion">
-	</form>
+				<form action="connexion.php" method="post">
+					login&nbsp;&nbsp;=======><input type="text" name="login" value=""><br />
+					mot de passe&nbsp;==><input type="password" name="pwd" value=""><br />
+					<br />
+					<input type="submit" name="connexion" value="Connexion">
+				</form>
+		</div>
+	</div>
+</div>
 		
 <?php
 
