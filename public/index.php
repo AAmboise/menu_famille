@@ -4,8 +4,8 @@
 require '../vendor/autoload.php';
 
 // Nom de la route
-$route = !empty($_SERVER['REQUEST_URI'])
-	? substr($_SERVER['REQUEST_URI'], 1)
+$route = !empty($_GET['routeur'])
+	? $_GET['routeur']
 	: null
 ;
 
@@ -16,50 +16,50 @@ switch ($route){
 	default:
 	case null:
 	case 'index.php':
-	//case 'index':
+	case 'index':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->accueil();
 		break;
 
 	// Page d'inscription
-	case 'inscription.php':
+	case 'inscription':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->inscription();
 		break;
 
 	// Page de connexion
-	case 'connexion.php':
+	case 'connexion':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->connexion();
 		break;
 
 	// Page de vérification
-	case 'verification.php':
+	case 'verification':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->verification();
 		break;
 
 	// Page Espace Membres
-	case 'espace-membre.php':
+	case 'espace-membre':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->espace_membre();
 		break;
 
 
 	// Page addUser
-	case 'addUser.php':
+	case 'addUser':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->addUser();
 		break;
 
 	// Page de deconnexion
-	case 'deconnexion.php':
+	case 'deconnexion':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->deconnexion();
 		break;
 
 	// Page de a propos
-	case 'apropos.php':
+	case 'apropos':
 		$homeController = new \MenuFamille\Controller\HomeController();
 		echo $homeController->apropos();
 		break;
