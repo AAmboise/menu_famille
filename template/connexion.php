@@ -7,7 +7,7 @@
 			<p class="fw-bold">Connexion à l'espace membre :<br /></p>
 
 				<form action="connexion.php" method="post">
-					login&nbsp;&nbsp;=======><input type="text" name="login" value=""><br />
+					login&nbsp;&nbsp;=======><input type="text" name="login" value=""><br /><br />
 					mot de passe&nbsp;==><input type="password" name="pwd" value=""><br />
 					<br />
 					<input type="submit" name="connexion" value="Connexion">
