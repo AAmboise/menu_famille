@@ -6,7 +6,7 @@
     	<div class="py-2 my-5 text-center message col-5 border border-dark border-3 rounded-3">
 			<p class="fw-bold">Connexion à l'espace membre :<br /></p>
 
-				<form action="connexion.php" method="post">
+				<form action="index.php?routeur=connexion" method="post">
 					login&nbsp;&nbsp;=======><input type="text" name="login" value=""><br /><br />
 					mot de passe&nbsp;==><input type="password" name="pwd" value=""><br />
 					<br />
@@ -43,7 +43,7 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion'){
 		if ($data[0] == 1){
 			session_start();
 			$_SESSION['login'] = $_POST['login'];
-			header('Location: espace-membre.php');
+			header('Location: index.php?routeur=espace-membre');
 			exit();
 		}
 
@@ -56,13 +56,13 @@ if (isset($_POST['connexion']) && $_POST['connexion'] == 'Connexion'){
 		// Sinon, il existe un problème dans la base de données
 		else {
 			echo'Plusieurs membres ont<br/>les memes login et mot de passe !'; 
-			echo"<br/><a href=\"accueil.php\">Revenir à l'accueil</a>";exit();
+			echo"<br/><a href=\"index.php\">Revenir à l'accueil</a>";exit();
 		}
 	}
 	
 	else {
 		echo'Errreur de saisie !<br/>Au moins un des champs est vide !'; 
-		echo"<br/><a href=\"accueil.php\">Revenir à l'accueil</a>";exit();
+		echo"<br/><a href=\"index.php\">Revenir à l'accueil</a>";exit();
 	}
 } ?>
 
